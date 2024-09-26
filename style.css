@@ -1,0 +1,214 @@
+/* General Body and Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(63, 94, 251, 0.8), rgba(252, 70, 107, 0.8));
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #f0f0f0;
+}
+
+p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* Section Styles */
+section {
+    margin: 50px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+li {
+    margin: 0 15px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+/* Register Button */
+#register-project {
+    text-align: center;
+    padding: 20px;
+}
+
+#register-btn {
+    padding: 15px 30px;
+    background-color: rgba(63, 94, 251, 0.9);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#register-btn:hover {
+    background-color: rgba(252, 70, 107, 0.9);
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 15px;
+    color: #ccc;
+    position: relative;
+}
+
+/* Register Form Styling */
+#register-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#register-form-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#register-form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#register-form h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #9b2020;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-buttons button {
+    padding: 10px 15px;
+    background-color: rgba(63, 94, 251, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-buttons button:hover {
+    background-color: rgba(252, 70, 107, 0.8);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    #register-btn {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+
+    #register-form {
+        width: 90%;
+    }
+}
